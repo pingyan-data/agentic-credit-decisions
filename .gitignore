@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Vector store (regenerated from compliance_docs)
+data/chroma_compliance/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# API keys
+.env
+*.env
+
+# LangSmith trace cache
+.langgraph/

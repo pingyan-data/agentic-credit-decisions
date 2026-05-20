@@ -1,0 +1,26 @@
+{
+  "application_id": "TEST_004_PROTECTED_PROXY",
+  "description": "Decline-band PD where SHAP analysis would surface zip_code as a top driver. Compliance agent should FLAG this — proxy for protected class. Even though risk-based decision is decline, the case should be diverted to HUMAN_REVIEW with bias notice.",
+  "expected_band": "decline",
+  "expected_compliance": "flagged",
+  "expected_final": "HUMAN_REVIEW",
+  "note": "This scenario assumes zip_code is an active model feature. If your model_C does not include zip_code, modify the feature schema to include it. The point is to demonstrate the protected-class proxy detection path.",
+  "application": {
+    "loan_amnt": 15000,
+    "int_rate": 18.0,
+    "annual_inc": 45000,
+    "dti": 0.35,
+    "delinq_2yrs": 1,
+    "revol_util": 0.78,
+    "open_acc": 10,
+    "total_acc": 16,
+    "pub_rec": 0,
+    "fico_range_low": 640,
+    "inq_last_6mths": 5,
+    "emp_length": 3,
+    "home_ownership": "RENT",
+    "verification_status": "Source Verified",
+    "purpose": "debt_consolidation",
+    "zip_code": "60624"
+  }
+}

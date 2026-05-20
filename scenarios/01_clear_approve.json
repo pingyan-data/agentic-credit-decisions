@@ -1,0 +1,24 @@
+{
+  "application_id": "TEST_001_CLEAR_APPROVE",
+  "description": "Clean profile: stable income, low DTI, low utilization, no delinquencies. Expected outcome: APPROVE.",
+  "expected_band": "approve",
+  "expected_compliance": "pass",
+  "expected_final": "APPROVE",
+  "application": {
+    "loan_amnt": 8000,
+    "int_rate": 8.5,
+    "annual_inc": 85000,
+    "dti": 0.12,
+    "delinq_2yrs": 0,
+    "revol_util": 0.18,
+    "open_acc": 6,
+    "total_acc": 12,
+    "pub_rec": 0,
+    "fico_range_low": 760,
+    "inq_last_6mths": 1,
+    "emp_length": 8,
+    "home_ownership": "MORTGAGE",
+    "verification_status": "Verified",
+    "purpose": "debt_consolidation"
+  }
+}

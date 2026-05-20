@@ -1,0 +1,24 @@
+{
+  "application_id": "TEST_003_CLEAR_DECLINE",
+  "description": "High-risk profile: low income, very high DTI, max utilization, multiple delinquencies, public record. Expected: DECLINE with full Adverse Action Notice.",
+  "expected_band": "decline",
+  "expected_compliance": "pass",
+  "expected_final": "DECLINE",
+  "application": {
+    "loan_amnt": 25000,
+    "int_rate": 22.5,
+    "annual_inc": 32000,
+    "dti": 0.48,
+    "delinq_2yrs": 3,
+    "revol_util": 0.95,
+    "open_acc": 14,
+    "total_acc": 22,
+    "pub_rec": 1,
+    "fico_range_low": 580,
+    "inq_last_6mths": 8,
+    "emp_length": 1,
+    "home_ownership": "RENT",
+    "verification_status": "Not Verified",
+    "purpose": "small_business"
+  }
+}

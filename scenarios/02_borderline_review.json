@@ -1,0 +1,24 @@
+{
+  "application_id": "TEST_002_BORDERLINE_REVIEW",
+  "description": "Mixed signals: decent income but elevated DTI and utilization, one recent delinquency. PD likely lands in 0.10-0.30 review band.",
+  "expected_band": "review",
+  "expected_compliance": "pass",
+  "expected_final": "HUMAN_REVIEW",
+  "application": {
+    "loan_amnt": 12000,
+    "int_rate": 14.2,
+    "annual_inc": 52000,
+    "dti": 0.28,
+    "delinq_2yrs": 1,
+    "revol_util": 0.62,
+    "open_acc": 9,
+    "total_acc": 18,
+    "pub_rec": 0,
+    "fico_range_low": 685,
+    "inq_last_6mths": 3,
+    "emp_length": 4,
+    "home_ownership": "RENT",
+    "verification_status": "Source Verified",
+    "purpose": "credit_card"
+  }
+}
