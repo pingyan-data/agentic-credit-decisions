@@ -254,7 +254,7 @@ agentic-credit-decisions/
 
 ---
 
-## 6. Two-week roadmap
+## 6. Two-week roadmap to make it in production 
 
 > 我估了一下时间。每天 2-3 小时认真投入,2 周可以做完核心 + 一个能 demo 的 Streamlit。
 
@@ -286,7 +286,7 @@ agentic-credit-decisions/
 
 ## 7. What this project does NOT claim to do
 
-诚实重要。面试时不要 oversell:
+目前的局限性和真实性:
 
 ✗ **不**是生产级系统(没有 Klarna 真实数据、没有真实 LLM provider redundancy、没有真实 EU AI Act 法律意见)
 ✗ **不**自动 retrain 模型(static model artifacts,不是 ML training pipeline)
