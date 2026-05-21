@@ -20,7 +20,7 @@
 
 ---
 
-## 2. Why this matters for Klarna interviews
+## 2. Why Agent system 
 
 我在 Section 5 笔记里已经分析过:**2030 年 Klarna 可能会再裁员至少1000 人，整体规模缩到 <2,000 人,留下来的是 judgment + governance + relationship 角色**。公司应该关心的核心能力是:
 
