@@ -7,7 +7,7 @@
 
 ## 1. Why this project
 
-我的 `llm-credit-risk` repo 已经有完整的 PD model + SHAP + decision policy。但它是一个**单一模型**:输入特征,输出概率,完事。
+我的 `llm-credit-risk` repo 已经有完整的 PD model + SHAP + decision policy。但它是一个**单一模型**:输入特征,输出概率。
 
 真实的信贷决策流程不是这样的。一笔申请要经过:
 1. **Underwriting**:模型给出风险评分和初始建议
@@ -22,9 +22,9 @@
 
 ## 2. Why this matters for Klarna interviews
 
-我在 Section 5 笔记里已经分析过:**2030 年 Klarna 缩到 <2,000 人,留下来的是 judgment + governance + relationship 角色**。这个项目直接演示我懂这三层:
+我在 Section 5 笔记里已经分析过:**2030 年 Klarna 可能会再裁员至少1000 人，整体规模缩到 <2,000 人,留下来的是 judgment + governance + relationship 角色**。公司应该关心的核心能力是:
 
-| Klarna 关心的能力 | 这个项目怎么体现 |
+| 能力 | 这个项目怎么体现 |
 |---|---|
 | **Judgment layer**(决定模型何时该被覆盖) | Underwriter agent + 3 个分支决策(approve/review/decline) |
 | **Model governance**(监管对接) | Compliance agent + EU AI Act / Reg B 的 RAG 检索 |
@@ -32,7 +32,7 @@
 | **AI orchestration**(管理 agent fleet) | LangGraph state machine + conditional routing |
 | **Domain expertise**(信贷业务深度) | 三个 agent 的 prompt 里都嵌入了真实信贷术语和 regulatory citation |
 
-面试时一句话 pitch:
+To summarize my agnetic system design:
 > "I built a 3-agent system that simulates Klarna's underwriting workflow: an underwriter agent that calls my existing PD model as a tool, a compliance agent that uses RAG to check EU AI Act and Reg B, and an explainer agent that generates Adverse Action Notices. The orchestration is LangGraph with conditional routing based on PD score and compliance status."
 
 ---
