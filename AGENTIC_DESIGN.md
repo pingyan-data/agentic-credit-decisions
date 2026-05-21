@@ -254,37 +254,8 @@ agentic-credit-decisions/
 
 ---
 
-## 6. Two-week roadmap to make it in production 
 
-> 我估了一下时间。每天 2-3 小时认真投入,2 周可以做完核心 + 一个能 demo 的 Streamlit。
-
-### Week 1: Core agents + orchestration
-
-| Day | Task | Deliverable |
-|---|---|---|
-| Day 1 | 创建新 repo / 子目录,setup `langgraph` + `langchain` 环境 | `requirements_agents.txt` 跑通 |
-| Day 2 | 写 `state.py` + `tools.py`(把现有 PD model 包成 tool) | 单元测试通过 |
-| Day 3 | 写 `underwriter.py`(用 mock LLM 先跑通) | Single-agent 跑通 3 个 scenario |
-| Day 4 | 准备 compliance corpus(3 份 .md 文档),写 RAG retriever | `search_regulations()` 工作 |
-| Day 5 | 写 `compliance.py` | 合规 agent 跑通 |
-| Day 6 | 写 `explainer.py` + feature glossary CSV | AAN 输出成型 |
-| Day 7 | 写 `graph.py`,编排 3 个 agent + conditional routing | End-to-end pipeline 跑通 |
-
-### Week 2: Polish + demo + write-up
-
-| Day | Task | Deliverable |
-|---|---|---|
-| Day 8 | 4 个 scenario JSON + 测试 | 全 workflow 可重复 |
-| Day 9 | Streamlit `app_agentic.py`(在原 dashboard 加一个 "Agent Trace" tab) | 可点击 demo |
-| Day 10 | 写 README,准备 architecture diagram(用 Excalidraw 画) | repo 看起来专业 |
-| Day 11 | (可选)接真实 LLM API,跑 4 个 scenario,记录成本和 latency | benchmark numbers |
-| Day 12 | 写一篇 LinkedIn / Substack 文章解释这个项目 | 公开传播 |
-| Day 13 | 录 60-90 秒的 demo video(loom) | 面试时直接发 |
-| Day 14 | Buffer + 修 bug | 上线 |
-
----
-
-## 7. What this project does NOT claim to do
+## 6. What this project does NOT claim to do
 
 目前的局限性和真实性:
 
@@ -299,12 +270,8 @@ agentic-credit-decisions/
 
 ---
 
-## 8. Pitch script for interviews
+## 8. Summary 
 
-**短版(30 秒)**:
-> "I extended my credit risk repo with a multi-agent layer. Three agents — underwriter, compliance, explainer — orchestrated by LangGraph. The underwriter calls my PD model as a tool, the compliance agent uses RAG over EU AI Act and Reg B, the explainer generates Adverse Action Notices in English and Swedish. It's about 600 lines of code. Demo at [URL]."
-
-**长版(2 分钟)**:
 > "After reading Klarna's engineering blog and the CEO's 20VC interview, I noticed a pattern: the data scientists who survive the AI compression are the ones doing judgment, governance, and cross-functional translation — not the ones writing models faster. So I built a project that demonstrates I think in those three layers.
 >
 > The base is my LLM credit risk repo, which has a calibrated PD model with SHAP. On top of that, I added a 3-agent orchestration layer using LangGraph. The first agent is an underwriter that calls the PD model as a tool — note that the model is the source of truth, the agent doesn't predict, it interprets. The second is a compliance agent doing RAG over EU AI Act and Reg B Adverse Action requirements. This bridges directly to my GDPR RAG project. The third is an explainer that translates SHAP outputs into customer-facing letters.
@@ -326,4 +293,4 @@ If I have time after the 2-week core build:
 
 ---
 
-**Bottom line**: 这个项目是**我从 mid-career generalist 主动跳出来的证据**。不是另一个 model training notebook —— 是 orchestration、governance、translation 三层的具体演示。
+**Bottom line**: 这个项目是 orchestration、governance、translation 三层的具体演示。
